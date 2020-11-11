@@ -78,6 +78,11 @@
           <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Directory.GetFiles( Folder_Path+&quot;\External\BOD&quot;)(0)" />
         </Variable.Default>
       </Variable>
+      <Variable x:TypeArguments="s:String[]" Name="List_WT">
+        <Variable.Default>
+          <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="{}{&quot;1000|2215|2315|2310|2170|2285|2555|2560&quot;, &quot;2190|2205|2530|0&quot;}" />
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -94,7 +99,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="BOD" sap:VirtualizedContainerService.HintSize="262,66" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="BOD" sap:VirtualizedContainerService.HintSize="709,1793" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <Sequence.Variables>
               <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="Reguler_List_Name" />
               <Variable x:TypeArguments="sd:DataTable" Name="Data_Reguler" />
@@ -180,11 +185,6 @@
                           </ActivityAction.Argument>
                           <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="539,330" sap2010:WorkflowViewState.IdRef="Sequence_3">
                             <Sequence.Variables>
-                              <Variable x:TypeArguments="s:String[]" Name="List_WT">
-                                <Variable.Default>
-                                  <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="{}{&quot;1000|2215|2315|2310|2170|2285|2555|2560&quot;, &quot;0|2205|2530|0&quot;}" />
-                                </Variable.Default>
-                              </Variable>
                               <Variable x:TypeArguments="s:String[]" Name="Wt" />
                             </Sequence.Variables>
                             <sap:WorkflowViewStateService.ViewState>

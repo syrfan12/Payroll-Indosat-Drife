@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1038,1926</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1011,1926</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>bacaTvextract_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="42">
@@ -129,7 +129,7 @@
                         </ui:Target>
                       </ui:TypeInto.Target>
                     </ui:TypeInto>
-                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'INPUT'" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'INPUT'" sap:VirtualizedContainerService.HintSize="664,154" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
                       <ui:SendHotkey.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1aaa5bf-7318-4dd5-b7d6-f55804167f77" InformativeScreenshot="7e6ab7345148183dcc4a59d4808bd853" Selector="&lt;webctrl name='password' tag='INPUT' /&gt;">
                           <ui:Target.TimeoutMS>
@@ -152,14 +152,14 @@
                           <av:Size x:Key="ShapeSize">60,75</av:Size>
                           <x:Double x:Key="Width">630</x:Double>
                           <x:Double x:Key="Height">660.5</x:Double>
-                          <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 530,107.5 530,147</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 290,107.5 290,137</av:PointCollection>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <Flowchart.StartNode>
                         <x:Reference>__ReferenceID3</x:Reference>
                       </Flowchart.StartNode>
-                      <FlowStep>
+                      <FlowStep x:Name="__ReferenceID3">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">190,137</av:Point>
@@ -292,9 +292,9 @@
                                 <av:PointCollection x:Key="ConnectorLocation">290,325.5 290,355.5 280,355.5 280,356.5</av:PointCollection>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:UiElementExists DisplayName="Element Exists 'SPAN'" Exists="[Finish_Upload]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                            <ui:UiElementExists DisplayName="Element Exists 'SPAN'" Exists="[Finish_Upload]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
                               <ui:UiElementExists.Target>
-                                <ui:Target Element="{x:Null}" Id="2ec6e29c-43ca-41d3-92e8-404cfa49acf1" InformativeScreenshot="720266caaf6ea0023a83fea3075117a7" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;div' idx='3' parentid='test_file_galery' tag='DIV' /&gt;">
+                                <ui:Target Element="{x:Null}" Id="2ec6e29c-43ca-41d3-92e8-404cfa49acf1" InformativeScreenshot="720266caaf6ea0023a83fea3075117a7" Selector="&lt;html app='chrome.exe' title='Member | TvEXTRACT | Choose Doc Type | Document' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;div&amp;gt;button&amp;gt;span' idx='1' isleaf='1' parentid='test_file_galery' tag='SPAN' /&gt;">
                                   <ui:Target.ClippingRegion>
                                     <ui:Region Rectangle="102, 29, 14, 18" />
                                   </ui:Target.ClippingRegion>
@@ -397,7 +397,7 @@
                       <x:Reference>__ReferenceID0</x:Reference>
                       <x:Reference>__ReferenceID1</x:Reference>
                       <x:Reference>__ReferenceID2</x:Reference>
-                      <FlowStep x:Name="__ReferenceID3">
+                      <FlowStep>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">430,147</av:Point>

@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1011,1226</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>996,1226</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>flow_lsmw_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="31">
@@ -95,7 +95,7 @@
       <Variable x:TypeArguments="s:String[]" Name="Cell_Add" />
       <Variable x:TypeArguments="x:Int32" Name="idx_proses">
         <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" Value="7" />
+          <Literal x:TypeArguments="x:Int32" />
         </Variable.Default>
       </Variable>
       <Variable x:TypeArguments="s:String[]" Name="List_Amou_Exc" />
@@ -163,7 +163,7 @@
         <InArgument x:TypeArguments="s:String[]">[Split( Data_Setting_arg.ToList(10).ToString, ";")]</InArgument>
       </Assign.Value>
     </Assign>
-    <Flowchart sap:VirtualizedContainerService.HintSize="1125,1514" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart sap:VirtualizedContainerService.HintSize="1126,1514" sap2010:WorkflowViewState.IdRef="Flowchart_1">
       <Flowchart.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="range" />
         <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="PersNo" />
@@ -187,12 +187,12 @@
           <av:Point x:Key="ShapeLocation">630,2.5</av:Point>
           <av:Size x:Key="ShapeSize">60,75</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">630,40 440,40 440,60</av:PointCollection>
-          <x:Double x:Key="Width">1091</x:Double>
+          <x:Double x:Key="Width">1092</x:Double>
           <x:Double x:Key="Height">1478.04965026804</x:Double>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Flowchart.StartNode>
-        <x:Reference>__ReferenceID22</x:Reference>
+        <x:Reference>__ReferenceID20</x:Reference>
       </Flowchart.StartNode>
       <FlowStep x:Name="__ReferenceID1">
         <sap:WorkflowViewStateService.ViewState>
@@ -234,7 +234,7 @@
                         <Switch.Default>
                           <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[Split(Split(item.ToString, &quot;\&quot;).Last,&quot;.&quot;).Last]" />
                         </Switch.Default>
-                        <Sequence x:Key="xlsx" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <Sequence x:Key="xlsx" sap:VirtualizedContainerService.HintSize="476,552" sap2010:WorkflowViewState.IdRef="Sequence_7">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -395,6 +395,19 @@
                             <InArgument x:TypeArguments="x:Int32">[0]</InArgument>
                           </ui:FilterOperationArgument.Operand>
                         </ui:FilterOperationArgument>
+                        <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="Or" Operator="EMPTY">
+                          <ui:FilterOperationArgument.Column>
+                            <InArgument x:TypeArguments="x:Int32">[0]</InArgument>
+                          </ui:FilterOperationArgument.Column>
+                        </ui:FilterOperationArgument>
+                        <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                          <ui:FilterOperationArgument.Column>
+                            <InArgument x:TypeArguments="x:Int32">[0]</InArgument>
+                          </ui:FilterOperationArgument.Column>
+                          <ui:FilterOperationArgument.Operand>
+                            <InArgument x:TypeArguments="x:Int32">[0]</InArgument>
+                          </ui:FilterOperationArgument.Operand>
+                        </ui:FilterOperationArgument>
                       </scg:List>
                     </ui:FilterDataTable.Filters>
                     <ui:FilterDataTable.SelectColumns>
@@ -405,7 +418,10 @@
                   </ui:FilterDataTable>
                 </Sequence>
                 <FlowStep.Next>
-                  <FlowDecision x:Name="__ReferenceID14" Condition="[range2.Rows.Count = 0]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+                  <FlowDecision x:Name="__ReferenceID14" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+                    <FlowDecision.Condition>
+                      <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="range2.Rows.Count = 0" />
+                    </FlowDecision.Condition>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -549,7 +565,7 @@
                                               </FlowStep>
                                             </FlowDecision.True>
                                             <FlowDecision.False>
-                                              <FlowStep x:Name="__ReferenceID22">
+                                              <FlowStep x:Name="__ReferenceID20">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <av:Point x:Key="ShapeLocation">309,60</av:Point>
@@ -566,7 +582,7 @@
                                                   </Assign.Value>
                                                 </Assign>
                                                 <FlowStep.Next>
-                                                  <FlowDecision x:Name="__ReferenceID21" Condition="[File_Name.Count = 0]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_8" True="{x:Reference __ReferenceID0}">
+                                                  <FlowDecision x:Name="__ReferenceID19" Condition="[File_Name.Count = 0]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_8" True="{x:Reference __ReferenceID0}">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -577,7 +593,7 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                     <FlowDecision.False>
-                                                      <FlowDecision x:Name="__ReferenceID25" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_10">
+                                                      <FlowDecision x:Name="__ReferenceID23" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_10">
                                                         <FlowDecision.Condition>
                                                           <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="idx_proses &lt;&gt; 11" />
                                                         </FlowDecision.Condition>
@@ -594,7 +610,7 @@
                                                           <x:Reference>__ReferenceID1</x:Reference>
                                                         </FlowDecision.True>
                                                         <FlowDecision.False>
-                                                          <FlowStep x:Name="__ReferenceID26">
+                                                          <FlowStep x:Name="__ReferenceID24">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                 <av:Point x:Key="ShapeLocation">760,184.5</av:Point>
@@ -667,7 +683,7 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <av:Point x:Key="ShapeLocation">280.5,456.5</av:Point>
                                 <av:Size x:Key="ShapeSize">79,87</av:Size>
-                                <av:PointCollection x:Key="FalseConnector">359.5,500 394.5,500 394.5,416.04 449,416.04 449,383.04 601,383.04 601,356.5 690.25,356.5 690.25,386.5</av:PointCollection>
+                                <av:PointCollection x:Key="FalseConnector">359.5,500 392.5,500 392.5,435 446,435 446,397 520,397 520,426.5</av:PointCollection>
                                 <av:PointCollection x:Key="TrueConnector">280.5,500 220,500 220,550</av:PointCollection>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
@@ -689,7 +705,7 @@
                                   </Assign.Value>
                                 </Assign>
                                 <FlowStep.Next>
-                                  <FlowStep x:Name="__ReferenceID7">
+                                  <FlowStep x:Name="__ReferenceID6">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <av:Point x:Key="ShapeLocation">530,619</av:Point>
@@ -697,9 +713,9 @@
                                         <av:PointCollection x:Key="ConnectorLocation">630,641 630,660</av:PointCollection>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{range2.Rows( idx_loop_data)(0).ToString.Substring(range2.Rows( idx_loop_data)(0).ToString.Count-4,4),&quot;&quot;,&#x9;Date.DaysInMonth( Now.Year, Now.Month).ToString+&quot;.&quot;+Now.Month.ToString+&quot;.&quot;+Now.Year.ToString,&#x9;&quot;01.&quot;+Now.Month.ToString+&quot;.&quot;+Now.Year.ToString,&#x9;wageType,&#x9;WageAmount,&#x9;&quot;IDR&quot;&#xA;}]" DataTable="[DataTab]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{range2.Rows( idx_loop_data)(0).ToString.Substring(range2.Rows( idx_loop_data)(0).ToString.Count-4,4),&quot;&quot;,&#x9;Date.DaysInMonth( Now.Year, Now.Month).ToString+&quot;.&quot;+Now.Month.ToString+&quot;.&quot;+Now.Year.ToString,&#x9;&quot;01.&quot;+Now.Month.ToString+&quot;.&quot;+Now.Year.ToString,&#x9;wageType,&#x9;WageAmount.Trim,&#x9;&quot;IDR&quot;&#xD;&#xA;}]" DataTable="[DataTab]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
                                     <FlowStep.Next>
-                                      <FlowStep x:Name="__ReferenceID6">
+                                      <FlowStep x:Name="__ReferenceID7">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <av:Point x:Key="ShapeLocation">499,660</av:Point>
@@ -721,7 +737,10 @@
                                           </sap:WorkflowViewStateService.ViewState>
                                         </Assign>
                                         <FlowStep.Next>
-                                          <FlowDecision x:Name="__ReferenceID9" Condition="[idx_loop_data &gt;= range2.Rows.Count]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                                          <FlowDecision x:Name="__ReferenceID9" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                                            <FlowDecision.Condition>
+                                              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="idx_loop_data &gt;= range2.Rows.Count" />
+                                            </FlowDecision.Condition>
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -770,118 +789,90 @@
                               </FlowStep>
                             </FlowDecision.True>
                             <FlowDecision.False>
-                              <FlowDecision x:Name="__ReferenceID19" Condition="[idx_proses &lt;&gt; 6]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_7">
+                              <FlowDecision x:Name="__ReferenceID21" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_9">
+                                <FlowDecision.Condition>
+                                  <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="idx_proses &lt;&gt; 7" />
+                                </FlowDecision.Condition>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <av:Point x:Key="ShapeLocation">670.5,386.5</av:Point>
+                                    <av:Point x:Key="ShapeLocation">480.5,426.5</av:Point>
                                     <av:Size x:Key="ShapeSize">79,87</av:Size>
-                                    <av:PointCollection x:Key="TrueConnector">670.5,430 640.5,430 640.5,396.5 520,396.5 520,426.5</av:PointCollection>
-                                    <av:PointCollection x:Key="FalseConnector">749.5,430 770,430 770,489</av:PointCollection>
+                                    <av:PointCollection x:Key="TrueConnector">480.5,470 450.5,470 450.5,570 499,570</av:PointCollection>
+                                    <av:PointCollection x:Key="FalseConnector">559.5,470 680,470</av:PointCollection>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <FlowDecision.True>
-                                  <FlowDecision x:Name="__ReferenceID23" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_9">
-                                    <FlowDecision.Condition>
-                                      <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="idx_proses = 7" />
-                                    </FlowDecision.Condition>
+                                  <FlowStep x:Name="__ReferenceID10">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        <av:Point x:Key="ShapeLocation">480.5,426.5</av:Point>
-                                        <av:Size x:Key="ShapeSize">79,87</av:Size>
-                                        <av:PointCollection x:Key="TrueConnector">480.5,470 424.5,470 424.5,511.04 390,511.04 390,619 330,619 330,637</av:PointCollection>
-                                        <av:PointCollection x:Key="FalseConnector">559.5,470 630,470 630,540</av:PointCollection>
+                                        <av:Point x:Key="ShapeLocation">499,540</av:Point>
+                                        <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                        <av:PointCollection x:Key="ConnectorLocation">630,600 630,619</av:PointCollection>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <FlowDecision.True>
-                                      <FlowStep x:Name="__ReferenceID24">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <av:Point x:Key="ShapeLocation">230,637</av:Point>
-                                            <av:Size x:Key="ShapeSize">200,66</av:Size>
-                                            <av:PointCollection x:Key="ConnectorLocation">430,670 460,670 460,690 499,690</av:PointCollection>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                        <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_13">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                          <If Condition="[Cint(range2.Rows(idx_loop_data)(1)) &gt; Value_Max_Meals]" sap:VirtualizedContainerService.HintSize="591,362" sap2010:WorkflowViewState.IdRef="If_1">
-                                            <If.Then>
-                                              <Sequence sap:VirtualizedContainerService.HintSize="242,176" sap2010:WorkflowViewState.IdRef="Sequence_11">
-                                                <sap:WorkflowViewStateService.ViewState>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                  </scg:Dictionary>
-                                                </sap:WorkflowViewStateService.ViewState>
-                                                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{range2.Rows( idx_loop_data)(0).ToString.Substring(range2.Rows( idx_loop_data)(0).ToString.Count-4,4),&quot;&quot;,&#x9;Date.DaysInMonth( Now.Year, Now.Month).ToString+&quot;.&quot;+Now.Month.ToString+&quot;.&quot;+Now.Year.ToString,&#x9;&quot;16.&quot;+Now.Month.ToString+&quot;.&quot;+Now.Year.ToString,&#x9;wageType, Value_Max_Meals.ToString,&#x9;&quot;IDR&quot;&#xD;&#xA;}]" DataTable="[DataTab]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
-                                                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{range2.Rows( idx_loop_data)(0).ToString.Substring(range2.Rows( idx_loop_data)(0).ToString.Count-4,4),&quot;&quot;,&#x9;&quot;14.&quot;+Now.Month.ToString+&quot;.&quot;+Now.Year.ToString,&#x9;&quot;01.&quot;+Now.Month.ToString+&quot;.&quot;+Now.Year.ToString,&#x9;wageType,&#x9;( CInt(range2.Rows(idx_loop_data)(1)) - Value_Max_Meals).ToString,&#x9;&quot;IDR&quot;&#xD;&#xA;}]" DataTable="[DataTab]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_4" />
-                                              </Sequence>
-                                            </If.Then>
-                                            <If.Else>
-                                              <Sequence sap:VirtualizedContainerService.HintSize="304,214" sap2010:WorkflowViewState.IdRef="Sequence_12">
-                                                <sap:WorkflowViewStateService.ViewState>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                  </scg:Dictionary>
-                                                </sap:WorkflowViewStateService.ViewState>
-                                                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_20">
-                                                  <Assign.To>
-                                                    <OutArgument x:TypeArguments="x:String">[WageAmount]</OutArgument>
-                                                  </Assign.To>
-                                                  <Assign.Value>
-                                                    <InArgument x:TypeArguments="x:String">[range2.Rows(idx_loop_data)(1).ToString.Replace(".", "")]</InArgument>
-                                                  </Assign.Value>
-                                                </Assign>
-                                                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{range2.Rows( idx_loop_data)(0).ToString.Substring(range2.Rows( idx_loop_data)(0).ToString.Count-4,4),&quot;&quot;,&#x9;&quot;31.12.9999&quot;,&#x9;&quot;01.&quot;+Now.Month.ToString+&quot;.&quot;+Now.Year.ToString,&#x9;wageType,&#x9;WageAmount,&#x9;&quot;IDR&quot;&#xD;&#xA;}]" DataTable="[DataTab]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_5" />
-                                              </Sequence>
-                                            </If.Else>
-                                          </If>
-                                        </Sequence>
-                                        <FlowStep.Next>
-                                          <x:Reference>__ReferenceID6</x:Reference>
-                                        </FlowStep.Next>
-                                      </FlowStep>
-                                    </FlowDecision.True>
-                                    <FlowDecision.False>
-                                      <FlowStep x:Name="__ReferenceID10">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <av:Point x:Key="ShapeLocation">499,540</av:Point>
-                                            <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                            <av:PointCollection x:Key="ConnectorLocation">630,600 630,619</av:PointCollection>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_4">
-                                          <Assign.To>
-                                            <OutArgument x:TypeArguments="x:String">[WageAmount]</OutArgument>
-                                          </Assign.To>
-                                          <Assign.Value>
-                                            <InArgument x:TypeArguments="x:String">[range2.Rows(idx_loop_data)(1).ToString.Replace(".", "")]</InArgument>
-                                          </Assign.Value>
-                                        </Assign>
-                                        <FlowStep.Next>
-                                          <x:Reference>__ReferenceID7</x:Reference>
-                                        </FlowStep.Next>
-                                      </FlowStep>
-                                    </FlowDecision.False>
-                                  </FlowDecision>
-                                </FlowDecision.True>
-                                <FlowDecision.False>
-                                  <FlowStep x:Name="__ReferenceID20">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <av:Point x:Key="ShapeLocation">670,489</av:Point>
-                                        <av:Size x:Key="ShapeSize">200,22</av:Size>
-                                        <av:PointCollection x:Key="ConnectorLocation">870,500 900,500 900,690 761,690</av:PointCollection>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{range.Rows( idx_loop_data)(0).ToString.Substring(range.Rows( idx_loop_data)(0).ToString.Count-4,4),&quot;&quot;,&#x9;range.Rows(idx_loop_data)(3).ToString, range.Rows(idx_loop_data)(2).ToString,&#x9;wageType,&#x9;(range.Rows(idx_loop_data)(1).ToString).Replace(&quot;.&quot;, &quot;&quot;),&#x9;&quot;IDR&quot;&#xA;}]" DataTable="[DataTab]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[WageAmount]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">[range2.Rows(idx_loop_data)(1).ToString.Replace(".", "")]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
                                     <FlowStep.Next>
                                       <x:Reference>__ReferenceID6</x:Reference>
+                                    </FlowStep.Next>
+                                  </FlowStep>
+                                </FlowDecision.True>
+                                <FlowDecision.False>
+                                  <FlowStep x:Name="__ReferenceID22">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <av:Point x:Key="ShapeLocation">680,437</av:Point>
+                                        <av:Size x:Key="ShapeSize">200,66</av:Size>
+                                        <av:PointCollection x:Key="ConnectorLocation">880,470 910,470 910,690 761,690</av:PointCollection>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <If Condition="[Cint(range2.Rows(idx_loop_data)(1)) &gt; Value_Max_Meals]" sap:VirtualizedContainerService.HintSize="591,362" sap2010:WorkflowViewState.IdRef="If_1">
+                                        <If.Then>
+                                          <Sequence sap:VirtualizedContainerService.HintSize="242,176" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{range2.Rows( idx_loop_data)(0).ToString.Substring(range2.Rows( idx_loop_data)(0).ToString.Count-4,4),&quot;&quot;,&#x9;Date.DaysInMonth( Now.Year, Now.Month).ToString+&quot;.&quot;+Now.Month.ToString+&quot;.9999&quot;,&#x9;&quot;01.&quot;+Now.Month.ToString+&quot;.&quot;+Now.Year.ToString,&#x9;wageType, Value_Max_Meals.ToString,&#x9;&quot;IDR&quot;&#xD;&#xA;}]" DataTable="[DataTab]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
+                                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{range2.Rows( idx_loop_data)(0).ToString.Substring(range2.Rows( idx_loop_data)(0).ToString.Count-4,4),&quot;&quot;,&#x9;Date.DaysInMonth( Now.Year, Now.Month).ToString+&quot;.&quot;+Now.Month.ToString+&quot;.&quot;+Now.Year.ToString,&#x9;&quot;01.&quot;+Now.Month.ToString+&quot;.&quot;+Now.Year.ToString,&#x9;wageType,&#x9;( CInt(range2.Rows(idx_loop_data)(1)) - Value_Max_Meals).ToString,&#x9;&quot;IDR&quot;&#xD;&#xA;}]" DataTable="[DataTab]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_4" />
+                                          </Sequence>
+                                        </If.Then>
+                                        <If.Else>
+                                          <Sequence sap:VirtualizedContainerService.HintSize="304,214" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_20">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:String">[WageAmount]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:String">[range2.Rows(idx_loop_data)(1).ToString.Replace(".", "")]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{range2.Rows( idx_loop_data)(0).ToString.Substring(range2.Rows( idx_loop_data)(0).ToString.Count-4,4),&quot;&quot;,&#x9;&quot;31.12.9999&quot;,&#x9;&quot;01.&quot;+Now.Month.ToString+&quot;.&quot;+Now.Year.ToString,&#x9;wageType,&#x9;WageAmount,&#x9;&quot;IDR&quot;&#xD;&#xA;}]" DataTable="[DataTab]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_5" />
+                                          </Sequence>
+                                        </If.Else>
+                                      </If>
+                                    </Sequence>
+                                    <FlowStep.Next>
+                                      <x:Reference>__ReferenceID7</x:Reference>
                                     </FlowStep.Next>
                                   </FlowStep>
                                 </FlowDecision.False>
@@ -900,8 +891,8 @@
       </FlowStep>
       <x:Reference>__ReferenceID8</x:Reference>
       <x:Reference>__ReferenceID9</x:Reference>
-      <x:Reference>__ReferenceID6</x:Reference>
       <x:Reference>__ReferenceID7</x:Reference>
+      <x:Reference>__ReferenceID6</x:Reference>
       <x:Reference>__ReferenceID10</x:Reference>
       <x:Reference>__ReferenceID5</x:Reference>
       <x:Reference>__ReferenceID11</x:Reference>
@@ -922,8 +913,6 @@
       <x:Reference>__ReferenceID22</x:Reference>
       <x:Reference>__ReferenceID23</x:Reference>
       <x:Reference>__ReferenceID24</x:Reference>
-      <x:Reference>__ReferenceID25</x:Reference>
-      <x:Reference>__ReferenceID26</x:Reference>
     </Flowchart>
   </Sequence>
 </Activity>
